@@ -12,6 +12,7 @@ module MotionProvisioning
       self.platform = platform
       output_path = MotionProvisioning.output_path
       provisioning_profile_path = File.join(output_path, "#{bundle_id}_#{platform}_#{type}_provisioning_profile.mobileprovision")
+      return provisioning_profile_path
       provisioning_profile_name = "(MotionProvisioning) #{bundle_id} #{platform} #{type}"
       certificate_type = type == :development ? :development : :distribution
       certificate_platform = platform == :mac ? :mac : :ios
